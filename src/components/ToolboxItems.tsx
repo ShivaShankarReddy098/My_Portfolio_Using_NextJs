@@ -1,15 +1,25 @@
+import { twMerge } from "tailwind-merge";
 import { TechIcon } from "./TechIcon";
 export const ToolboxItems = ({
   items,
+  className,
+  itemWrapperClassName,
 }: {
   items: {
     title: string;
     icon: React.ElementType;
   }[];
+  className?: string;
+  itemWrapperClassName?: string;
 }) => {
   return (
-    <div className="flex">
-      <div className="flex flex-none  py-0.5">
+    <div className={twMerge("flex", className)}>
+      <div
+        className={twMerge(
+          "flex flex-none  py-0.5 gap-6 pr-6",
+          itemWrapperClassName
+        )}
+      >
         {items.map((item) => (
           <div
             key={item.title}

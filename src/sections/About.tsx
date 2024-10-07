@@ -45,71 +45,108 @@ const hobbies = [
   {
     title: " VolleyBall",
     emoji: "🏐",
+    left: "0%",
+    top: "0%",
   },
   {
     title: " Football",
     emoji: "⚽",
+    left: "55%",
+    top: "60%",
   },
   {
     title: "Gaming",
     emoji: "🎮",
+    left: "10%",
+    top: "35%",
   },
   {
     title: " Anime",
     emoji: "🎞️",
+    left: "-2%",
+    top: "65%",
   },
   {
     title: " Music",
     emoji: "🎧",
+    left: "67%",
+    top: "10%",
   },
 ];
 
 export const AboutSection = () => {
   return (
-    <div className="py-20">
+    <div className="py-20 lg:py-28">
       <div className="container">
         <SectionHeader
           eyebrow="A Glimps Into My World"
           title="About Me"
           description="Learn more about who I am,what I do,and what Inspires me"
         />
-        <div className="mt-20">
-          <div className=" max-w-xs md:max-w-md md:p-8 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10  relative after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2">
-            <CardHeader
-              title="My Idol"
-              description="inspired me to not losing hope"
-            />
-            <div className="w-40 mx-auto mt-8">
-              <Image src={Messi} alt="messi" />
+        <div className="mt-20 flex flex-col gap-8">
+          <div className="md:grid md:grid-cols-5 md:gap-8 flex flex-col gap-8 lg:grid lg:grid-cols-4">
+            <div className="lg:col-span-2 max-w-xs md:col-span-2 md:max-w-md md:p-8 px-8 pt-8 md:pt-12 md:px-10  md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10  relative after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2">
+              <CardHeader
+                title="My Idol"
+                description="Inspired me to not losing hope."
+              />
+
+              <Image
+                src={Messi}
+                alt="messi"
+                className="h-full w-full object-cover md:object-contain"
+              />
             </div>
-          </div>
-          <div className="h-[320px] p-0 max-w-xs md:max-w-md md:p-8 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10  relative after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2">
-            <CardHeader
-              className="px-6 pt-6"
-              title="My Toolbox"
-              description="Explore the technology and tools I use to craft exceptional
+            <div className="h-[320px] lg:col-span-2 max-w-xs md:col-span-3 md:max-w-md md:p-8  md:pt-12 md:px-10  md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10  relative after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2">
+              <CardHeader
+                className="px-6 pt-6"
+                title="My Toolbox"
+                description="Explore the technology and tools I use to craft exceptional
                 digital experiences."
-            />
-            <ToolboxItems items={toolboxItems} />
-            <ToolboxItems items={toolboxItems} />
-          </div>
-          <div className="max-w-xs md:max-w-md md:p-8 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10  relative after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2">
-            <CardHeader
-              title="Beyond the Code"
-              description="Explore my interests and hobbies."
-            />
-            <div>
-              {hobbies.map((hobby) => (
-                <div key={hobby.title}>
-                  <span>{hobby.title}</span>
-                  <span>{hobby.emoji}</span>
-                </div>
-              ))}
+              />
+              <ToolboxItems
+                items={toolboxItems}
+                className="mt-2"
+                itemWrapperClassName="-translate-x-1/2"
+              />
+              <ToolboxItems items={toolboxItems} className="mt-1" />
             </div>
           </div>
-          <div className="max-w-xs md:max-w-md md:p-8 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10  relative after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2">
-            <Image src={mapImage} alt="map" />
-            <Image src={smileMemoji} alt="smile" />
+          <div className="md:grid md:grid-cols-5 md:gap-8  flex flex-col gap-8 lg:grid lg:grid-cols-4">
+            <div className="h-[320px] flex flex-col lg:col-span-2 md:col-span-3 p-0 max-w-xs md:max-w-md md:p-8  md:pt-12 md:px-10 lg:pt-16 lg:px-20 md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10  relative after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2">
+              <CardHeader
+                title="Beyond the Code"
+                description="Explore my interests and hobbies."
+                className="px-6 py-6 md:px-1 md:py-1 lg:px-0 lg:absolute lg:top-2 lg:left-7"
+              />
+              <div className="relative flex-1 ">
+                {hobbies.map((hobby) => (
+                  <div
+                    key={hobby.title}
+                    className="inline-flex gap-2 items-center px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute lg:mt-5"
+                    style={{
+                      left: hobby.left,
+                      top: hobby.top,
+                    }}
+                  >
+                    <span className="font-medium text-gray-950">
+                      {hobby.title}
+                    </span>
+                    <span>{hobby.emoji}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative h-[320px] lg:p-0 md:p-0 lg:col-span-2 md:col-span-2 max-w-xs md:max-w-md md:px-10  md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10   after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2">
+              <Image
+                src={mapImage}
+                alt="map"
+                className="h-full w-full object-cover object-center md:h-full md:w-full md:object-cover lg:h-full lg:w-full lg:object-cover"
+              />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-1 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 size-20">
+                <Image src={smileMemoji} alt="smile" className="size-20" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
