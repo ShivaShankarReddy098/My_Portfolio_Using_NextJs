@@ -1,5 +1,12 @@
-import Arrow from "@/assets/icons/arrow-up-right.svg";
+// "use client";
+// import Arrow from "@/assets/icons/arrow-up-right.svg";
+// import { DialogBar } from "@/components/Dialog";
+
+import { ContactSideBar } from "@/components/ContactSideBar";
+
+// import { useState } from "react";
 export const ContactSection = () => {
+  // const [showDialog, setShowDialog] = useState(false);
   return (
     <div className="py-16 pt-12">
       <div className="container">
@@ -11,10 +18,11 @@ export const ContactSection = () => {
             Ready to bring your next project to life ?. Let&apos;s connect and
             discuss.I can help you to achieve your goals.
           </p>
-          <button className="text-white bg-gray-900 inline-flex px-6 h-12 rounded-2xl items-center gap-2 mt-8">
+          {/* <button className="text-white bg-gray-900 inline-flex px-6 h-12 rounded-2xl items-center gap-2 mt-8">
             <span className="font-semibold">Contact Me</span>
             <Arrow className="size-4" />
-          </button>
+          </button> */}
+          <ContactSideBar />
         </div>
       </div>
     </div>
