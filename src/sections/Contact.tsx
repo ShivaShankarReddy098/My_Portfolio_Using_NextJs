@@ -9,7 +9,7 @@ export const ContactSection = () => {
           </h2>
           <p className="text-lg mt-2 text-gray-600">
             Ready to bring your next project to life ?. Let&apos;s connect and
-            discuss.I can help you achieve your goals.
+            discuss.I can help you to achieve your goals.
           </p>
           <button className="text-white bg-gray-900 inline-flex px-6 h-12 rounded-2xl items-center gap-2 mt-8">
             <span className="font-semibold">Contact Me</span>

@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    name: "Alex Turner",
+    name: "Abhishek Reddy",
     position: "Marketing Manager @ TechStartups",
     text: "Shiva was instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
     avatar: memojiAvatar1,

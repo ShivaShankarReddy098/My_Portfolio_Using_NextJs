@@ -9,8 +9,8 @@ import ReactIcon from "@/assets/icons/react.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import { TechIcon } from "@/components/TechIcon";
-import mapImage from "@/assets/images/map.png";
-import smileMemoji from "@/assets/images/memoji-avatar-1.png";
+import mapImage from "@/assets/images/MAP.jpg";
+import smileMemoji from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
 
@@ -32,12 +32,12 @@ const toolboxItems = [
     icon: ReactIcon,
   },
   {
-    title: "Chrome",
-    icon: ChromeIcon,
-  },
-  {
     title: "Github",
     icon: GithubIcon,
+  },
+  {
+    title: "Chrome",
+    icon: ChromeIcon,
   },
 ];
 
@@ -88,7 +88,7 @@ export const AboutSection = () => {
             <div className="lg:col-span-2 max-w-xs md:col-span-2 md:max-w-md md:p-8 px-8 pt-8 md:pt-12 md:px-10  md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10  relative after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2">
               <CardHeader
                 title="My Idol"
-                description="Inspired me to not losing hope."
+                description="Lionel Messi has inspired me to never lose hope, reminding me that perseverance and dedication can lead to greatness."
               />
 
               <Image
@@ -141,10 +141,14 @@ export const AboutSection = () => {
               <Image
                 src={mapImage}
                 alt="map"
-                className="h-full w-full object-cover object-center md:h-full md:w-full md:object-cover lg:h-full lg:w-full lg:object-cover"
+                className="h-full w-full object-cover object-center md:h-full md:w-full md:object-cover"
               />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-1 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 size-20">
-                <Image src={smileMemoji} alt="smile" className="size-20" />
+              <div className="flex absolute top-52 left-28 lg:left-44 lg:top-64  z-1 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 size-14 justify-center items-center">
+                <Image
+                  src={smileMemoji}
+                  alt="smile"
+                  className="size-22 object-cover"
+                />
               </div>
             </div>
           </div>
