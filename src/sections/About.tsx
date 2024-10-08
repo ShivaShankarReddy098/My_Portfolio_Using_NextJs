@@ -13,6 +13,7 @@ import mapImage from "@/assets/images/MAP.jpg";
 import smileMemoji from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
+import { Fragment } from "react";
 
 const toolboxItems = [
   {
@@ -88,7 +89,7 @@ export const AboutSection = () => {
             <div className="lg:col-span-2 max-w-xs md:col-span-2 md:max-w-md md:p-8 px-8 pt-8 md:pt-12 md:px-10  md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10  relative after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2">
               <CardHeader
                 title="My Idol"
-                description="Lionel Messi has inspired me to never lose hope, reminding me that perseverance and dedication can lead to greatness."
+                description="Lionel Messi has inspired me to never lose hope, reminding me that perseverance and dedication can lead to greatness."
               />
 
               <Image
@@ -104,12 +105,29 @@ export const AboutSection = () => {
                 description="Explore the technology and tools I use to craft exceptional
                 digital experiences."
               />
-              <ToolboxItems
-                items={toolboxItems}
-                className="mt-2"
-                itemWrapperClassName="-translate-x-1/2"
-              />
-              <ToolboxItems items={toolboxItems} className="mt-1" />
+              <div className="flex flex-none animate-move-left [animation-duration:5s]">
+                {[...new Array(2)].fill(0).map((_, idx) => (
+                  <Fragment key={idx}>
+                    <ToolboxItems
+                      items={toolboxItems}
+                      className="mt-2"
+                      itemWrapperClassName="-translate-x-1/2"
+                    />
+                  </Fragment>
+                ))}
+              </div>
+              <div className="flex flex-none animate-move-left [animation-duration:8s]">
+                {[...new Array(2)].fill(0).map((_, idx) => (
+                  <Fragment key={idx}>
+                    <ToolboxItems
+                      items={toolboxItems}
+                      className="mt-2"
+                      itemWrapperClassName="-translate-x-1/2"
+                    />
+                  </Fragment>
+                ))}
+              </div>
+              {/* <ToolboxItems items={toolboxItems} className="mt-1" /> */}
             </div>
           </div>
           <div className="md:grid md:grid-cols-5 md:gap-8  flex flex-col gap-8 lg:grid lg:grid-cols-4">
@@ -123,7 +141,7 @@ export const AboutSection = () => {
                 {hobbies.map((hobby) => (
                   <div
                     key={hobby.title}
-                    className="inline-flex gap-2 items-center px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute lg:mt-5"
+                    className="animate-pulse [animation-duration:2s] inline-flex gap-2 items-center px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute lg:mt-5"
                     style={{
                       left: hobby.left,
                       top: hobby.top,

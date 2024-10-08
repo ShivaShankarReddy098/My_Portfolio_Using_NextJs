@@ -9,21 +9,24 @@ export const Footer = () => {
           </div>
           <nav className="flex flex-col md:flex-row lg:flex-row lg:gap-16 items-center gap-8">
             <a
-              href=""
+              href="https://github.com/ShivaShankarReddy098"
+              target="_blank"
               className="inline-flex items-center gap-1.5 hover:text-white/50 transition-all"
             >
-              <span className="font-semibold">Twitter</span>
+              <span className="font-semibold">Github</span>
               <Arrow className="size-4" />
             </a>
             <a
-              href=""
+              href="https://www.instagram.com/shivashankarreddy.98/"
+              target="_blank"
               className="inline-flex items-center gap-1.5 hover:text-white/50 transition-all"
             >
               <span className="font-semibold">Instagram</span>
               <Arrow className="size-4" />
             </a>
             <a
-              href=""
+              href="https://www.linkedin.com/in/shiva-shankar-reddy-2639b4235/"
+              target="_blank"
               className="inline-flex items-center gap-1.5 hover:text-white/50 transition-all"
             >
               <span className="font-semibold">LinkedIn</span>
