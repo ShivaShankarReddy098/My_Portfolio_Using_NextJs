@@ -86,10 +86,50 @@ export const AboutSection = () => {
       scrollTrigger: {
         trigger: "#section1",
         // scrub: true,
-        toggleActions: "restart pause reverse pause",
+        toggleActions: "restart none none none",
       },
       y: 100,
       duration: 2,
+    });
+    gsap.from("#div1", {
+      scrollTrigger: {
+        trigger: "#div1",
+        // scrub: true,
+        toggleActions: "restart none none none",
+      },
+      duration: 3,
+      x: -500,
+      ease: "back-in",
+    });
+    gsap.from("#div2", {
+      scrollTrigger: {
+        trigger: "#div2",
+        // scrub: true,
+        toggleActions: "restart none none none",
+      },
+      duration: 4,
+      x: 500,
+      ease: "back-in",
+    });
+    gsap.from("#div3", {
+      scrollTrigger: {
+        trigger: "#div3",
+        // scrub: true,
+        toggleActions: "restart none none none",
+      },
+      duration: 5,
+      x: -500,
+      ease: "back-in",
+    });
+    gsap.from("#div4", {
+      scrollTrigger: {
+        trigger: "#div4",
+        // scrub: true,
+        toggleActions: "restart none none none",
+      },
+      duration: 6,
+      x: 700,
+      ease: "back-in",
     });
   });
   return (
@@ -104,7 +144,10 @@ export const AboutSection = () => {
         </div>
         <div className="mt-20 flex flex-col gap-8">
           <div className="md:grid md:grid-cols-5 md:gap-8 flex flex-col gap-8 lg:grid lg:grid-cols-4">
-            <div className="lg:col-span-2 max-w-xs md:col-span-2 md:max-w-md md:p-8 px-8 pt-8 md:pt-12 md:px-10  md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10  relative after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2">
+            <div
+              id="div1"
+              className="lg:col-span-2 max-w-xs md:col-span-2 md:max-w-md md:p-8 px-8 pt-8 md:pt-12 md:px-10  md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10  relative after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2"
+            >
               <CardHeader
                 title="My Idol"
                 description="Lionel Messi has inspired me to never lose hope, reminding me that perseverance and dedication can lead to greatness."
@@ -116,7 +159,10 @@ export const AboutSection = () => {
                 className="h-full w-full object-cover md:object-contain"
               />
             </div>
-            <div className="h-[320px] lg:col-span-2 max-w-xs md:col-span-3 md:max-w-md md:p-8  md:pt-12 md:px-10  md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10  relative after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2">
+            <div
+              id="div2"
+              className="h-[320px] lg:col-span-2 max-w-xs md:col-span-3 md:max-w-md md:p-8  md:pt-12 md:px-10  md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10  relative after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2"
+            >
               <CardHeader
                 className="px-6 pt-6"
                 title="My Toolbox"
@@ -149,7 +195,10 @@ export const AboutSection = () => {
             </div>
           </div>
           <div className="md:grid md:grid-cols-5 md:gap-8  flex flex-col gap-8 lg:grid lg:grid-cols-4">
-            <div className="h-[320px] flex flex-col lg:col-span-2 md:col-span-3 p-0 max-w-xs md:max-w-md md:p-8  md:pt-12 md:px-10 lg:pt-16 lg:px-20 md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10  relative after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2">
+            <div
+              id="div3"
+              className="h-[320px] flex flex-col lg:col-span-2 md:col-span-3 p-0 max-w-xs md:max-w-md md:p-8  md:pt-12 md:px-10 lg:pt-16 lg:px-20 md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10  relative after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2"
+            >
               <CardHeader
                 title="Beyond the Code"
                 description="Explore my interests and hobbies."
@@ -173,7 +222,10 @@ export const AboutSection = () => {
                 ))}
               </div>
             </div>
-            <div className="relative h-[320px] lg:p-0 md:p-0 lg:col-span-2 md:col-span-2 max-w-xs md:max-w-md md:px-10  md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10   after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2">
+            <div
+              id="div4"
+              className="relative h-[320px] lg:p-0 md:p-0 lg:col-span-2 md:col-span-2 max-w-xs md:max-w-md md:px-10  md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10   after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2"
+            >
               <Image
                 src={mapImage}
                 alt="map"

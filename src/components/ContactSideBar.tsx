@@ -1,4 +1,5 @@
-"use client";
+// "use client";
+// "use server";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -13,12 +14,36 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { useState } from "react";
+// import { useState } from "react";
 export const ContactSideBar = () => {
-  const [send, setSend] = useState(false);
-  const handleSend = () => {
-    setSend(true);
-  };
+  // const [send, setSend] = useState(false);
+  // const handleSend = () => {
+  //   setSend(true);
+  // };
+  //7511b0d8-00af-429a-9c7c-301da677dc30
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+
+    formData.append("access_key", "7511b0d8-00af-429a-9c7c-301da677dc30");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    });
+    const result = await response.json();
+    if (result.success) {
+      console.log(result);
+    }
+  }
+
   return (
     <>
       <Sheet>
@@ -31,58 +56,67 @@ export const ContactSideBar = () => {
             <Arrow className="size-4" />
           </Button>
         </SheetTrigger>
-        <SheetContent className="bg-gradient-to-r from-emerald-500 to-sky-700 pt-8">
-          <SheetHeader>
-            <SheetTitle className="font-serif text-2xl text-gray-800/1 font-bold">
-              <h1>Get In Touch 😍</h1>
-            </SheetTitle>
-            <SheetDescription className="text-white/2">
-              Enter Name,Email And Message To Touch With Me.
-            </SheetDescription>
-          </SheetHeader>
-          <div className="grid gap-8 py-4">
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="name" className="text-right text-white">
-                Name
-              </Label>
-              <Input
-                id="name"
-                placeholder="Your Name"
-                className="col-span-3 text-black"
-              />
+        <form onSubmit={handleSubmit}>
+          <SheetContent className="bg-gradient-to-r from-emerald-500 to-sky-700 pt-8">
+            <SheetHeader>
+              <SheetTitle className="font-serif text-2xl text-gray-800/1 font-bold">
+                <h1>Get In Touch 😍</h1>
+              </SheetTitle>
+              <SheetDescription className="text-white/2">
+                Enter Name,Email And Message To Touch With Me.
+              </SheetDescription>
+            </SheetHeader>
+            <div className="grid gap-8 py-4">
+              <div className="grid grid-cols-4 items-center gap-4">
+                <Label htmlFor="name" className="text-right text-white">
+                  Name
+                </Label>
+                <Input
+                  type="text"
+                  name="name"
+                  required
+                  id="name"
+                  placeholder="Your Name"
+                  className="col-span-3 text-black"
+                />
+              </div>
+              <div className="grid grid-cols-4 items-center gap-4">
+                <Label htmlFor="email" className="text-right text-white">
+                  Email
+                </Label>
+                <Input
+                  id="email"
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="xyz@gmail.com"
+                  className="col-span-3 text-black"
+                />
+              </div>
+              <div className="grid grid-cols-4 items-center gap-4">
+                <Label htmlFor="message" className="text-right text-white">
+                  Message
+                </Label>
+                <textarea
+                  name="message"
+                  required
+                  id="message"
+                  placeholder="Your Message"
+                  className="col-span-3 text-black rounded-lg h-20 p-7"
+                />
+              </div>
             </div>
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="email" className="text-right text-white">
-                Email
-              </Label>
-              <Input
-                id="email"
-                placeholder="xyz@gmail.com"
-                className="col-span-3 text-black"
-              />
-            </div>
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="message" className="text-right text-white">
-                Message
-              </Label>
-              <textarea
-                id="message"
-                placeholder="Your Message"
-                className="col-span-3 text-black rounded-lg h-20 p-7"
-              />
-            </div>
-          </div>
-          <SheetFooter>
-            <Button
-              type="submit"
-              className="mt-4 p-6  text-lg transition-all"
-              onClick={handleSend}
-            >
-              {send ? "Sent" : "Send"}
-            </Button>
-            {/* <SheetClose asChild></SheetClose> */}
-          </SheetFooter>
-        </SheetContent>
+            <SheetFooter>
+              <Button
+                type="submit"
+                className="mt-4 p-6  text-lg transition-all"
+              >
+                S E N D
+              </Button>
+              {/* <SheetClose asChild></SheetClose> */}
+            </SheetFooter>
+          </SheetContent>
+        </form>
       </Sheet>
     </>
   );

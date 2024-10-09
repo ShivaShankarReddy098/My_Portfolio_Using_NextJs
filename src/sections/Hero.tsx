@@ -9,6 +9,8 @@ import Link from "next/link";
 import { ProjectsSection } from "./Projects";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { SplitText } from "gsap/SplitText";
+import { useEffect } from "react";
 
 gsap.registerPlugin(useGSAP);
 export const HeroSection = () => {
@@ -26,6 +28,7 @@ export const HeroSection = () => {
     gsap.from("#btn2", { duration: 5, y: 500, ease: "back-in" });
     // gsap.to("#container", { stagger: 0.3 });
   });
+
   return (
     <div className="py-32 md:py-48 lg:py-40 relative z-0 overflow-x-clip">
       <div

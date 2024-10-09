@@ -1,5 +1,24 @@
+// "use client";
 import Arrow from "@/assets/icons/arrow-up-right.svg";
+// import { gsap } from "gsap";
+// import { useGSAP } from "@gsap/react";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// import { useState } from "react";
+// gsap.registerPlugin(ScrollTrigger);
 export const Footer = () => {
+  // useGSAP(() => [
+  //   gsap.from("#nav1", {
+  //     scrollTrigger: {
+  //       trigger: "#nav1",
+  //       // scrub: true,
+  //       toggleActions: "restart none none none",
+  //     },
+  //     x: 300,
+  //     duration: 2,
+  //     // delay: 3,
+  //   }),
+  // ]);
   return (
     <footer>
       <div className="container">
@@ -7,7 +26,10 @@ export const Footer = () => {
           <div className="text-white/40">
             &copy; 2024. All righhts reserved.
           </div>
-          <nav className="flex flex-col md:flex-row lg:flex-row lg:gap-16 items-center gap-8">
+          <nav
+            id="nav1"
+            className="flex flex-col md:flex-row lg:flex-row lg:gap-16 items-center gap-8"
+          >
             <a
               href="https://github.com/ShivaShankarReddy098"
               target="_blank"

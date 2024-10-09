@@ -1,14 +1,32 @@
-// "use client";
+"use client";
 // import Arrow from "@/assets/icons/arrow-up-right.svg";
 // import { DialogBar } from "@/components/Dialog";
 
 import { ContactSideBar } from "@/components/ContactSideBar";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // import { useState } from "react";
+gsap.registerPlugin(ScrollTrigger);
 export const ContactSection = () => {
   // const [showDialog, setShowDialog] = useState(false);
+  useGSAP(() => {
+    // const tl = gsap.timeline();
+    gsap.from("#contact", {
+      // stagger: 0.3,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#contact",
+        // scrub: true,
+        toggleActions: "restart pause reverse pause",
+      },
+      x: 200,
+      duration: 2,
+    });
+  });
   return (
-    <div className="py-16 pt-12">
+    <div id="contact" className="py-16 pt-12">
       <div className="container">
         <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-10 rounded-3xl text-center">
           <h2 className="font-serif text-2xl">
