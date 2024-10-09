@@ -1,3 +1,4 @@
+"use client";
 import { SectionHeader } from "@/components/SectionHeader";
 import StarIcon from "@/assets/icons/star.svg";
 import Messi from "@/assets/images/messi8.jpeg";
@@ -14,6 +15,9 @@ import smileMemoji from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
 import { Fragment } from "react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const toolboxItems = [
   {
@@ -74,16 +78,30 @@ const hobbies = [
     top: "10%",
   },
 ];
-
+gsap.registerPlugin(ScrollTrigger);
 export const AboutSection = () => {
+  useGSAP(() => {
+    gsap.from("#section1", {
+      // stagger: 0.3,
+      scrollTrigger: {
+        trigger: "#section1",
+        // scrub: true,
+        toggleActions: "restart pause reverse pause",
+      },
+      y: 100,
+      duration: 2,
+    });
+  });
   return (
     <div className="py-20 lg:py-28">
       <div className="container">
-        <SectionHeader
-          eyebrow="A Glimps Into My World"
-          title="About Me"
-          description="Learn more about who I am,what I do,and what Inspires me"
-        />
+        <div id="section1">
+          <SectionHeader
+            eyebrow="A Glimps Into My World"
+            title="About Me"
+            description="Learn more about who I am,what I do,and what Inspires me"
+          />
+        </div>
         <div className="mt-20 flex flex-col gap-8">
           <div className="md:grid md:grid-cols-5 md:gap-8 flex flex-col gap-8 lg:grid lg:grid-cols-4">
             <div className="lg:col-span-2 max-w-xs md:col-span-2 md:max-w-md md:p-8 px-8 pt-8 md:pt-12 md:px-10  md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10  relative after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2">

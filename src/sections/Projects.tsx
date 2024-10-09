@@ -1,3 +1,4 @@
+"use client";
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
@@ -6,6 +7,10 @@ import foodApp from "@/assets/images/FoodApp.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+//list as many as you'd like
 
 const portfolioProjects = [
   {
@@ -81,20 +86,61 @@ const portfolioProjects = [
     image: foodApp,
   },
 ];
-
+gsap.registerPlugin(ScrollTrigger); //MotionPathPlugin  ,MorphSVGPlugin
 export const ProjectsSection = () => {
+  useGSAP(() => {
+    gsap.from("#para", {
+      scrollTrigger: {
+        trigger: "#para",
+        // scrub: true,
+        toggleActions: "restart pause reverse pause",
+      },
+      duration: 1,
+      y: 100,
+    });
+    gsap.from("#h2", {
+      scrollTrigger: {
+        trigger: "#h2",
+        // scrub: true,
+        // start: "top center",
+        toggleActions: "restart pause reverse pause",
+      },
+      duration: 1,
+      y: 100,
+    });
+    gsap.from("#para1", {
+      scrollTrigger: {
+        trigger: "#para1",
+        // scrub: true,
+        // start: "top",
+        // markers:true,
+        toggleActions: "restart pause reverse pause",
+      },
+      duration: 1,
+      y: 100,
+    });
+  });
   return (
     <section className="pb-16 lg:py-24">
       <div className="container">
         <div className="flex justify-center">
-          <p className="text-xl md:text-lg max-w-md mx-auto uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">
+          <p
+            id="para"
+            className="text-xl md:text-lg max-w-md mx-auto uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text"
+          >
             Real-World Results
           </p>
         </div>
-        <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
+        <h2
+          id="h2"
+          className="font-serif text-3xl md:text-5xl text-center mt-6"
+        >
           Featured Projects
         </h2>
-        <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">
+        <p
+          id="para1"
+          className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto"
+        >
           See how I trasformed concepts into engaging digital experiences.
         </p>
         <div className="mt-1 md:mt-20 flex flex-col gap-20">

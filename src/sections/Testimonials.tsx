@@ -1,3 +1,4 @@
+"use client";
 import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
 import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
@@ -6,6 +7,9 @@ import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
 import { SectionHeader } from "@/components/SectionHeader";
 import Image from "next/image";
 import { Fragment } from "react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const testimonials = [
   {
@@ -39,17 +43,31 @@ const testimonials = [
     avatar: memojiAvatar5,
   },
 ];
-
+gsap.registerPlugin(ScrollTrigger);
 export const TestimonialsSection = () => {
+  useGSAP(() => {
+    gsap.from("#section", {
+      // stagger: 0.3,
+      scrollTrigger: {
+        trigger: "#section",
+        // scrub: true,
+        toggleActions: "restart pause reverse pause",
+      },
+      y: 100,
+      duration: 2,
+    });
+  });
   return (
     <div className="py-16 lg:py-24">
       <div className="container">
-        <SectionHeader
-          title="Happy Clients"
-          eyebrow="What Clients Say About Me"
-          description="Don't just take my word for it.See what my clients have to say
+        <div id="section">
+          <SectionHeader
+            title="Happy Clients"
+            eyebrow="What Clients Say About Me"
+            description="Don't just take my word for it.See what my clients have to say
         about my work."
-        />
+          />
+        </div>
         <div className="mt-12 lg:mt-20 flex overflow-x-clip py-4 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,trasparent)]">
           <div className="flex flex-none pr-8 gap-8 animate-move-left [animation-duration:20s] hover:[animation-play-state:paused]">
             {[...new Array(2)].fill(0).map((_, index) => (

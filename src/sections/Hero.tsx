@@ -24,6 +24,7 @@ export const HeroSection = () => {
     gsap.from("#heroPara", { duration: 15, x: -500, ease: "elastic" });
     gsap.from("#btn1", { duration: 4, y: 700, ease: "back-in" });
     gsap.from("#btn2", { duration: 5, y: 500, ease: "back-in" });
+    // gsap.to("#container", { stagger: 0.3 });
   });
   return (
     <div className="py-32 md:py-48 lg:py-40 relative z-0 overflow-x-clip">
@@ -62,7 +63,7 @@ export const HeroSection = () => {
         <StarIcon className="size-24 text-emerald-300/15" />
       </HeroOrbit>
 
-      <div className="container">
+      <div id="container" className="container">
         <div className="flex flex-col items-center">
           <Image
             id="img"
