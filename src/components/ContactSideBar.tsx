@@ -107,12 +107,12 @@ export const ContactSideBar = () => {
               </div>
             </div>
             <SheetFooter>
-              <Button
+              <button
                 type="submit"
-                className="mt-4 p-6  text-lg transition-all"
+                className="mt-4 p-2  text-lg transition-all bg-slate-400 rounded-lg hover:bg-slate-500 "
               >
                 S E N D
-              </Button>
+              </button>
               {/* <SheetClose asChild></SheetClose> */}
             </SheetFooter>
           </SheetContent>

@@ -21,12 +21,12 @@ export const ContactSection = () => {
         // scrub: true,
         toggleActions: "restart pause reverse pause",
       },
-      x: 200,
+      y: 200,
       duration: 2,
     });
   });
   return (
-    <div id="contact" className="py-16 pt-12">
+    <div id="contact" className="py-16 pt-6 ">
       <div className="container">
         <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-10 rounded-3xl text-center">
           <h2 className="font-serif text-2xl">

@@ -127,13 +127,13 @@ export const AboutSection = () => {
         // scrub: true,
         toggleActions: "restart none none none",
       },
-      duration: 6,
-      x: 700,
+      duration: 4,
+      x: 500,
       ease: "back-in",
     });
   });
   return (
-    <div className="py-20 lg:py-28">
+    <div id="about" className="py-20 lg:py-28">
       <div className="container">
         <div id="section1">
           <SectionHeader
@@ -142,7 +142,7 @@ export const AboutSection = () => {
             description="Learn more about who I am,what I do,and what Inspires me"
           />
         </div>
-        <div className="mt-20 flex flex-col gap-8">
+        <div className="mt-20 flex flex-col gap-8 relative z-0 overflow-x-clip">
           <div className="md:grid md:grid-cols-5 md:gap-8 flex flex-col gap-8 lg:grid lg:grid-cols-4">
             <div
               id="div1"

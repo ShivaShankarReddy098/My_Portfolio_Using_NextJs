@@ -30,7 +30,10 @@ export const HeroSection = () => {
   });
 
   return (
-    <div className="py-32 md:py-48 lg:py-40 relative z-0 overflow-x-clip">
+    <div
+      id="home"
+      className="py-32 md:py-48 lg:py-40 relative z-0 overflow-x-clip "
+    >
       <div
         className="absolute inset-0 -z-30 opacity-5"
         style={{
@@ -101,7 +104,9 @@ export const HeroSection = () => {
             id="btn1"
             className="inline-flex items-center z-10 gap-2 border border-white/15 px-6 h-12 rounded-xl"
           >
-            <span className="font-semibold">Explore My Work</span>
+            <Link href="#projects">
+              <span className="font-semibold">Explore My Work</span>
+            </Link>
             <ArrowDown className="size-4" />
           </button>
 
@@ -110,7 +115,9 @@ export const HeroSection = () => {
             className="inline-flex items-center z-10 gap-2 border border-white bg-white/90 text-green-900 h-12 px-6 rounded-xl"
           >
             <span>🤝</span>
-            <span className="font-semibold">Let&apos;s Connect</span>
+            <Link href="#contact">
+              <span className="font-semibold">Let&apos;s Connect</span>
+            </Link>
           </button>
         </div>
       </div>
