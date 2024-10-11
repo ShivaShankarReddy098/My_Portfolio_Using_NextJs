@@ -60,7 +60,7 @@ export const ContactSideBar = () => {
           <SheetContent className="bg-gradient-to-r from-emerald-500 to-sky-700 pt-8">
             <SheetHeader>
               <SheetTitle className="font-serif text-2xl text-gray-800/1 font-bold">
-                <h1>Get In Touch 😍</h1>
+                <h1>Get In Touch </h1>
               </SheetTitle>
               <SheetDescription className="text-white/2">
                 Enter Name,Email And Message To Touch With Me.

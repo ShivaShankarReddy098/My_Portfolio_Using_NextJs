@@ -45,6 +45,28 @@ const toolboxItems = [
     icon: ChromeIcon,
   },
 ];
+const skills = [
+  "JAVASCRIPT",
+  "REACTJS",
+  "NEXTJS",
+  "TYPESCRIPT",
+  "REACT QUERY",
+  "NODEJS",
+  "EXPRESSJS",
+  "MONGODB",
+  "MYSQL",
+  "POSTGRESQL",
+  "PYTHON",
+  "C",
+  "JAVA",
+  "C++",
+  "NUMPY",
+  "PANDAS",
+  "MATPLOTLIB",
+  "DSA",
+  "HTML",
+  "TAILWIND CSS",
+];
 
 const hobbies = [
   {
@@ -165,29 +187,45 @@ export const AboutSection = () => {
             >
               <CardHeader
                 className="px-6 pt-6"
-                title="My Toolbox"
+                title="My Skills"
                 description="Explore the technology and tools I use to craft exceptional
                 digital experiences."
               />
-              <div className="flex flex-none animate-move-left [animation-duration:5s]">
+              <div className="flex flex-none animate-move-left [animation-duration:5s] sm:mt-6">
                 {[...new Array(2)].fill(0).map((_, idx) => (
                   <Fragment key={idx}>
-                    <ToolboxItems
+                    {/* <ToolboxItems
                       items={toolboxItems}
                       className="mt-2"
                       itemWrapperClassName="-translate-x-1/2"
-                    />
+                    /> */}
+                    {skills.map((skill) => (
+                      <p
+                        key={skill}
+                        className="bg-gradient-to-r from-emerald-300 text-black to-sky-400 gap-2 ml-2 rounded-lg flex justify-center items-center px-3 "
+                      >
+                        {skill}
+                      </p>
+                    ))}
                   </Fragment>
                 ))}
               </div>
-              <div className="flex flex-none animate-move-left [animation-duration:8s]">
+              <div className="flex flex-none animate-move-left [animation-duration:9s] sm:mt-8">
                 {[...new Array(2)].fill(0).map((_, idx) => (
                   <Fragment key={idx}>
-                    <ToolboxItems
+                    {/* <ToolboxItems
                       items={toolboxItems}
                       className="mt-2"
                       itemWrapperClassName="-translate-x-1/2"
-                    />
+                    /> */}
+                    {skills.map((skill) => (
+                      <p
+                        key={skill}
+                        className="bg-gradient-to-r text-black from-emerald-300 to-sky-400 gap-2 ml-2 rounded-lg flex justify-center items-center px-3"
+                      >
+                        {skill}
+                      </p>
+                    ))}
                   </Fragment>
                 ))}
               </div>

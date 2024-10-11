@@ -3,6 +3,7 @@ import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import eCommerceApp from "@/assets/images/E-Commerce-app.png";
+import blogApp from "@/assets/images/Blog_App_Using_NextJs.png";
 import foodApp from "@/assets/images/FoodApp.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
@@ -14,73 +15,79 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const portfolioProjects = [
   {
-    company: "EPCET",
+    company: "Completed",
     year: "2023",
     title: "E-Learning Platform",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "ReactJS & React Query" },
+      { title: "Tailwind CSS" },
+      { title: "NodeJS & ExpressJS" },
+      { title: "MongoDB" },
     ],
     link: "#",
     image: eCommerceApp,
   },
   {
-    company: "EPCET",
+    company: "Completed",
     year: "2024",
     title: " Foodie web-App",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "ReactJS" },
+      { title: "NextJS" },
+      { title: "Tailwind CSS" },
+      { title: "Better SqlLite" },
     ],
     link: "https://food-app-using-next-js.vercel.app/",
     image: foodApp,
   },
   {
-    company: "EPCET",
+    company: "Completed",
+    year: "2024",
+    title: "Blog App",
+    results: [
+      { title: "ReactJS & NextJS" },
+      { title: "Tailwind CSS" },
+      { title: "NodeJS & ExpressJS" },
+      { title: "MongoDB" },
+    ],
+    link: "https://blog-app-using-next-js-nine.vercel.app/",
+    image: blogApp,
+  },
+  {
+    company: "Pending",
     year: "2024",
     title: "AI Interview Mocker",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Pending..." },
+      { title: "Pending..." },
+      { title: "Pending..." },
+      { title: "Pending..." },
     ],
     link: "#",
     image: aiStartupLandingPage,
   },
   {
-    company: "EPCET",
+    company: "Pending",
     year: "2024",
     title: "E-Commerce Website",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Pending..." },
+      { title: "Pending..." },
+      { title: "Pending..." },
+      { title: "Pending..." },
     ],
     link: "#",
     image: foodApp,
   },
   {
-    company: "EPCET",
+    company: "Pendind",
     year: "2024",
     title: "College Management Dashboard",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "#",
-    image: foodApp,
-  },
-  {
-    company: "EPCET",
-    year: "2024",
-    title: "Blog App",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Pending..." },
+      { title: "Pending..." },
+      { title: "Pending..." },
+      { title: "Pending..." },
     ],
     link: "#",
     image: foodApp,
@@ -121,7 +128,7 @@ export const ProjectsSection = () => {
     });
   });
   return (
-    <section id="projects" className="pb-16 lg:py-24">
+    <section id="projects" className="pb-16 lg:py-24 ">
       <div className="container">
         <div className="flex justify-center">
           <p
@@ -139,7 +146,7 @@ export const ProjectsSection = () => {
         </h2>
         <p
           id="para1"
-          className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto"
+          className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto mb-8"
         >
           See how I trasformed concepts into engaging digital experiences.
         </p>
@@ -172,8 +179,8 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
-                    <button className="bg-white text-gray-950 md:w-auto md:px-6 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
+                  <a href={project.link} target="_blank">
+                    <button className="bg-white cursor-not-allowed text-gray-950 md:w-auto md:px-6 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
                       <span>Visit Live Site</span>
                       <ArrowUpRightIcon className="size-4" />
                     </button>

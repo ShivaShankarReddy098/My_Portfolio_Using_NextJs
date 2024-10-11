@@ -17,15 +17,24 @@ export const HeroSection = () => {
   useGSAP(() => {
     // gsap.to("#img", { duration: 2, x: -40 });
     gsap.from("#img", {
-      duration: 6,
-      y: -300,
-      rotation: 360,
-      ease: "bounce",
+      duration: 2,
+      y: -50,
+      opacity: 0.6,
+      // rotation: 360,
+      // ease: "bounce",
     });
     gsap.from("#heroH1", { duration: 10, x: 500, ease: "back" });
     gsap.from("#heroPara", { duration: 15, x: -500, ease: "elastic" });
     gsap.from("#btn1", { duration: 4, y: 700, ease: "back-in" });
     gsap.from("#btn2", { duration: 5, y: 500, ease: "back-in" });
+    gsap.to("#name1", {
+      duration: 3,
+      opacity: 0.8,
+    });
+    gsap.to("#name2", {
+      duration: 6,
+      opacity: 1,
+    });
     // gsap.to("#container", { stagger: 0.3 });
   });
 
@@ -71,12 +80,24 @@ export const HeroSection = () => {
 
       <div id="container" className="container">
         <div className="flex flex-col items-center">
-          <Image
-            id="img"
-            src={memojiImage}
-            className="size-[100px]"
-            alt="heroImg"
-          />
+          <div className=" inline-flex items-center justify-center ">
+            <Image
+              id="img"
+              src={memojiImage}
+              className="size-[100px]"
+              alt="heroImg"
+            />
+            <div className="flex flex-col absolute items-start justify-center lg:mt-6">
+              <div className=" lg:top-2 lg:left-40 relative top-4 left-32">
+                <p id="name1" className="z-10 text-white sm:text-sm opacity-0">
+                  Hello !
+                </p>
+                <p id="name2" className="z-10 text-white sm:text-sm opacity-0">
+                  I am Shiva Shankar Reddy
+                </p>
+              </div>
+            </div>
+          </div>
           <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
             <div className="bg-green-400 size-2.5 rounded-full animate-pulse"></div>
             <div className="font-medium text-sm">
