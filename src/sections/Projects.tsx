@@ -5,6 +5,7 @@ import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import eCommerceApp from "@/assets/images/E-Commerce-app.png";
 import blogApp from "@/assets/images/Blog_App_Using_NextJs.png";
 import foodApp from "@/assets/images/FoodApp.png";
+import pendingImg from "@/assets/images/Pending_Project.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -24,7 +25,7 @@ const portfolioProjects = [
       { title: "NodeJS & ExpressJS" },
       { title: "MongoDB" },
     ],
-    link: "#",
+    link: "/",
     image: eCommerceApp,
   },
   {
@@ -58,39 +59,39 @@ const portfolioProjects = [
     year: "2024",
     title: "AI Interview Mocker",
     results: [
-      { title: "Pending..." },
-      { title: "Pending..." },
-      { title: "Pending..." },
-      { title: "Pending..." },
+      { title: "Pending1..." },
+      { title: "Pending2..." },
+      { title: "Pending3..." },
+      { title: "Pending4..." },
     ],
-    link: "#",
-    image: aiStartupLandingPage,
+    link: "",
+    image: pendingImg,
   },
   {
     company: "Pending",
     year: "2024",
     title: "E-Commerce Website",
     results: [
-      { title: "Pending..." },
-      { title: "Pending..." },
-      { title: "Pending..." },
-      { title: "Pending..." },
+      { title: "Pending5..." },
+      { title: "Pending6..." },
+      { title: "Pending7..." },
+      { title: "Pending8..." },
     ],
-    link: "#",
-    image: foodApp,
+    link: "",
+    image: pendingImg,
   },
   {
     company: "Pendind",
     year: "2024",
     title: "College Management Dashboard",
     results: [
-      { title: "Pending..." },
-      { title: "Pending..." },
-      { title: "Pending..." },
-      { title: "Pending..." },
+      { title: "Pending9..." },
+      { title: "Pending10..." },
+      { title: "Pending11..." },
+      { title: "Pending12..." },
     ],
-    link: "#",
-    image: foodApp,
+    link: "",
+    image: pendingImg,
   },
 ];
 gsap.registerPlugin(ScrollTrigger); //MotionPathPlugin  ,MorphSVGPlugin
@@ -128,7 +129,7 @@ export const ProjectsSection = () => {
     });
   });
   return (
-    <section id="projects" className="pb-16 lg:py-24 ">
+    <section id="projects" className="pb-16 lg:py-24 py-12 ">
       <div className="container">
         <div className="flex justify-center">
           <p

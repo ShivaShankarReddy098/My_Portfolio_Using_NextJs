@@ -84,16 +84,16 @@ export const HeroSection = () => {
             <Image
               id="img"
               src={memojiImage}
-              className="size-[100px]"
+              className="lg:size-[90px] size-[80px]"
               alt="heroImg"
             />
-            <div className="flex flex-col absolute items-start justify-center lg:mt-6">
-              <div className=" lg:top-2 lg:left-40 relative top-4 left-32">
+            <div className="flex flex-col absolute items-start  lg:mt-6">
+              <div className="flex flex-col lg:top-2 lg:left-36 relative top-3 left-28 ">
                 <p id="name1" className="z-10 text-white sm:text-sm opacity-0">
                   Hello !
                 </p>
                 <p id="name2" className="z-10 text-white sm:text-sm opacity-0">
-                  I am Shiva Shankar Reddy
+                  I&apos;m Shiva Shankar Reddy
                 </p>
               </div>
             </div>
