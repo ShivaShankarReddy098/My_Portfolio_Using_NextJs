@@ -51,7 +51,7 @@ export const TestimonialsSection = () => {
       scrollTrigger: {
         trigger: "#section",
         // scrub: true,
-        toggleActions: "restart pause reverse pause",
+        toggleActions: "restart pause pause pause",
       },
       y: 100,
       duration: 2,

@@ -88,7 +88,7 @@ export const HeroSection = () => {
               alt="heroImg"
             />
             <div className="flex flex-col absolute items-start  lg:mt-6">
-              <div className="flex flex-col lg:top-2 lg:left-36 relative top-3 left-[108px]">
+              <div className="flex flex-col lg:top-2 lg:left-32 relative top-3 left-[108px]">
                 <p id="name1" className="z-10 text-white sm:text-sm opacity-0">
                   Hello !
                 </p>
