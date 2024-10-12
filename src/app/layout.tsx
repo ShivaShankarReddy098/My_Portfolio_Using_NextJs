@@ -3,6 +3,7 @@ import { Inter, Calistoga } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
 import { Analytics } from "@vercel/analytics/react";
+import { ChakraProvider } from "@chakra-ui/react";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const calistoga = Calistoga({
@@ -12,7 +13,7 @@ const calistoga = Calistoga({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
+  title: "Shiva Shankar Reddy",
   description: "Created with the help of Frontend Tribe",
 };
 
@@ -30,7 +31,7 @@ export default function RootLayout({
           "bg-gray-900 text-white antialiased font-sans"
         )}
       >
-        {children}
+        <ChakraProvider>{children}</ChakraProvider>
         <Analytics />
       </body>
     </html>

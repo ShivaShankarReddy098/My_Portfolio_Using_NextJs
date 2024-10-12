@@ -14,6 +14,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+// import FormContact from "./FormContact";
 // import { useState } from "react";
 export const ContactSideBar = () => {
   // const [send, setSend] = useState(false);
@@ -56,8 +57,9 @@ export const ContactSideBar = () => {
             <Arrow className="size-4" />
           </Button>
         </SheetTrigger>
+
         <form onSubmit={handleSubmit}>
-          <SheetContent className="bg-gradient-to-r from-emerald-500 to-sky-700 pt-8">
+          <SheetContent className="bg-gray-900 text-white antialiased font-sans">
             <SheetHeader>
               <SheetTitle className="font-serif text-2xl text-gray-800/1 font-bold">
                 <h1>Get In Touch </h1>
@@ -109,14 +111,15 @@ export const ContactSideBar = () => {
             <SheetFooter>
               <button
                 type="submit"
-                className="mt-4 p-2  text-lg transition-all bg-slate-400 rounded-lg hover:bg-slate-500 "
+                className="mt-4 px-4 py-2  text-lg transition-all border rounded-lg text-yellow-300 hover:bg-white/15"
               >
-                S E N D
+                Send
               </button>
-              {/* <SheetClose asChild></SheetClose> */}
+              <SheetClose asChild></SheetClose>
             </SheetFooter>
           </SheetContent>
         </form>
+        {/* <FormContact /> */}
       </Sheet>
     </>
   );

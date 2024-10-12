@@ -119,7 +119,7 @@ export const AboutSection = () => {
         // scrub: true,
         toggleActions: "restart none none none",
       },
-      duration: 3,
+      duration: 2,
       x: -500,
       ease: "back-in",
     });
@@ -129,7 +129,7 @@ export const AboutSection = () => {
         // scrub: true,
         toggleActions: "restart none none none",
       },
-      duration: 4,
+      duration: 3,
       x: 500,
       ease: "back-in",
     });
@@ -139,7 +139,7 @@ export const AboutSection = () => {
         // scrub: true,
         toggleActions: "restart none none none",
       },
-      duration: 5,
+      duration: 4,
       x: -500,
       ease: "back-in",
     });
@@ -168,30 +168,30 @@ export const AboutSection = () => {
           <div className="md:grid md:grid-cols-5 md:gap-8 flex flex-col gap-8 lg:grid lg:grid-cols-4">
             <div
               id="div1"
-              className="lg:col-span-2 max-w-xs md:col-span-2 md:max-w-md md:p-8 px-8 pt-8 md:pt-12 md:px-10  md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10  relative after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2"
+              className="lg:pt-4 lg:col-span-2 max-w-xs md:col-span-2 md:max-w-md md:p-8 px-8 pt-8 md:pt-12 md:px-10  md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10  relative after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2"
             >
               <CardHeader
                 title="My Idol"
-                description="Lionel Messi has inspired me to never lose hope, reminding me that perseverance and dedication can lead to greatness."
+                description="Lionel Messi has inspired me to never lose hope and dedication can lead to greatness."
               />
 
               <Image
                 src={Messi}
                 alt="messi"
-                className="h-full w-full object-cover md:object-contain"
+                className="lg:mt-2 w-full object-cover md:object-contain"
               />
             </div>
             <div
               id="div2"
-              className="h-[320px] lg:col-span-2 max-w-xs md:col-span-3 md:max-w-md md:p-8  md:pt-12 md:px-10  md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10  relative after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2"
+              className=" lg:pt-4 p-4  lg:pb-4  lg:col-span-2 max-w-xs md:col-span-3 md:max-w-md md:p-8  md:pt-12 md:px-10  md:mt-5 after:pointer-events-none bg-gray-800 rounded-3xl overflow-hidden z-0 after:z-10  relative after:content[''] after:absolute after:inset-0 after:outline-white/20 after:outline-2 after:rounded-3xl after:outline after:-outline-offset-2"
             >
               <CardHeader
-                className="px-6 pt-6"
+                // className="px-6 pt-6"
                 title="My Skills"
                 description="Explore the technology and tools I use to craft exceptional
                 digital experiences."
               />
-              <div className="flex flex-none animate-move-left [animation-duration:5s] sm:mt-6">
+              <div className="flex flex-none animate-move-left [animation-duration:8s] sm:mt-6 lg:py-4">
                 {[...new Array(2)].fill(0).map((_, idx) => (
                   <Fragment key={idx}>
                     {/* <ToolboxItems
@@ -210,7 +210,7 @@ export const AboutSection = () => {
                   </Fragment>
                 ))}
               </div>
-              <div className="flex flex-none animate-move-left [animation-duration:9s] sm:mt-8">
+              <div className="flex flex-none animate-move-left [animation-duration:9s] sm:mt-8 lg:py-2">
                 {[...new Array(2)].fill(0).map((_, idx) => (
                   <Fragment key={idx}>
                     {/* <ToolboxItems
