@@ -13,7 +13,7 @@ export default function Home() {
   const [loading, setLoding] = useState(false);
   setTimeout(() => {
     setLoding(true);
-  }, 5000);
+  }, 2000);
   return (
     <div>
       <Header />

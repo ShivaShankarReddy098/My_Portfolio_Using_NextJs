@@ -6,6 +6,7 @@ import { ContactSideBar } from "@/components/ContactSideBar";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ContactUs } from "@/components/Emailjs";
 
 // import { useState } from "react";
 gsap.registerPlugin(ScrollTrigger);
@@ -41,6 +42,7 @@ export const ContactSection = () => {
             <Arrow className="size-4" />
           </button> */}
           <ContactSideBar />
+          {/* <ContactUs /> */}
         </div>
       </div>
     </div>
