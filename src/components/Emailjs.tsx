@@ -93,7 +93,7 @@ export const ContactUs: React.FC = () => {
             </Label>
             <Input
               type="text"
-              name="user_name"
+              name="to_name"
               required
               id="name"
               placeholder="Your Name"
