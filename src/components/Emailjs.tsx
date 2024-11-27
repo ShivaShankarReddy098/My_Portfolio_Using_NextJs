@@ -23,6 +23,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { redirect } from "next/navigation";
+import Confetti, { ConfettiButton } from "./ui/confetti";
 const initValues = {
   name: "",
   email: "",
@@ -135,11 +136,13 @@ export const ContactUs: React.FC = () => {
         <SheetFooter>
           <Button
             type="submit"
-            className="mt-4 px-4 py-2  text-lg transition-all border rounded-lg text-yellow-300 hover:bg-white/15"
+            className="mt-4 px-4 py-2  text-lg transition-all border rounded-lg "
             isLoading={isLoading}
             disabled={state}
           >
-            {state ? "Sent" : "Send"}
+            <ConfettiButton className="bg-transparent text-black hover:bg-white/15 items-center flex justify-center">
+              {state ? "Sent" : "Send"}
+            </ConfettiButton>
           </Button>
           <SheetClose asChild></SheetClose>
         </SheetFooter>

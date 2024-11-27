@@ -4,6 +4,7 @@ import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import eCommerceApp from "@/assets/images/E-Commerce-app.png";
 import blogApp from "@/assets/images/Blog_App_Using_NextJs.png";
+import DSA from "@/assets/images/DSA.png";
 import foodApp from "@/assets/images/FoodApp.png";
 import pendingImg from "@/assets/images/Pending_Project.png";
 import Image from "next/image";
@@ -17,16 +18,29 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const portfolioProjects = [
   {
     company: "Completed",
-    year: "2023",
-    title: "E-Learning Platform",
+    year: "2024",
+    title: "DSA Visualizer",
     results: [
-      { title: "ReactJS & React Query" },
+      { title: "ReactJS " },
+      { title: "Tailwind CSS" },
+      { title: "NextJS" },
+      { title: "Gemini Api" },
+    ],
+    link: "https://data-structure-and-sorting-visualizer.vercel.app/",
+    image: DSA,
+  },
+  {
+    company: "Completed",
+    year: "2024",
+    title: "Blog App",
+    results: [
+      { title: "ReactJS & NextJS" },
       { title: "Tailwind CSS" },
       { title: "NodeJS & ExpressJS" },
       { title: "MongoDB" },
     ],
-    link: "/",
-    image: eCommerceApp,
+    link: "https://blog-app-using-next-js-nine.vercel.app/",
+    image: blogApp,
   },
   {
     company: "Completed",
@@ -43,16 +57,16 @@ const portfolioProjects = [
   },
   {
     company: "Completed",
-    year: "2024",
-    title: "Blog App",
+    year: "2023",
+    title: "E-Learning Platform",
     results: [
-      { title: "ReactJS & NextJS" },
+      { title: "ReactJS & React Query" },
       { title: "Tailwind CSS" },
       { title: "NodeJS & ExpressJS" },
       { title: "MongoDB" },
     ],
-    link: "https://blog-app-using-next-js-nine.vercel.app/",
-    image: blogApp,
+    link: "/",
+    image: eCommerceApp,
   },
   {
     company: "Pending",
