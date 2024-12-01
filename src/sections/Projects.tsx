@@ -10,12 +10,26 @@ import pendingImg from "@/assets/images/Pending_Project.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import Chat from "@/assets/images/Chat.png";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 //list as many as you'd like
 
 const portfolioProjects = [
+  {
+    company: "Completed",
+    year: "2024",
+    title: "Real Time Chat Application",
+    results: [
+      { title: "ReactJS,Tailwind CSS" },
+      { title: "NodeJS,ExpressJS" },
+      { title: "MongoDB,Mongoose" },
+      { title: "Socket.IO" },
+    ],
+    link: "https://chatapp-uv4h.onrender.com",
+    image: Chat,
+  },
   {
     company: "Completed",
     year: "2024",
