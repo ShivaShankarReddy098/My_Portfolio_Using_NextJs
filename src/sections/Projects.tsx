@@ -7,6 +7,7 @@ import blogApp from "@/assets/images/Blog_App_Using_NextJs.png";
 import DSA from "@/assets/images/DSA.png";
 import foodApp from "@/assets/images/FoodApp.png";
 import pendingImg from "@/assets/images/Pending_Project.png";
+import AI from "@/assets/images/AIIMG.jpg"
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -17,6 +18,19 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 //list as many as you'd like
 
 const portfolioProjects = [
+  {
+    company: "Processing",
+    year: "2024",
+    title: "AI Interview Mocker",
+    results: [
+      { title: "NextJS" },
+      { title: "Tailwind CSS" },
+      { title: "MongoDB" },
+      { title: "Gemini API" },
+    ],
+    link: "https://ai-interview-mocker-azure.vercel.app/",
+    image: AI,
+  },
   {
     company: "Completed",
     year: "2024",
@@ -81,19 +95,6 @@ const portfolioProjects = [
     ],
     link: "/",
     image: eCommerceApp,
-  },
-  {
-    company: "Pending",
-    year: "2024",
-    title: "AI Interview Mocker",
-    results: [
-      { title: "Pending1..." },
-      { title: "Pending2..." },
-      { title: "Pending3..." },
-      { title: "Pending4..." },
-    ],
-    link: "",
-    image: pendingImg,
   },
   {
     company: "Pending",
